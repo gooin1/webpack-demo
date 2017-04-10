@@ -14,14 +14,20 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'js/[name]-[chunkhash].bundle.js'
+        filename: 'js/[name]-[chunkhash].bundle.js',
+        publicPath: 'https://gooin.win/'
     },
     plugins:[
         new htmlWebpackPlugin({
-            filename: 'index-[hash].html',
+            filename: 'index.html',
             template: 'index.html',
-            inject: 'head'
+            title: 'Webpack is good',
+            date: new Date(),
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true
 
+            }
         })
     ]
 };
