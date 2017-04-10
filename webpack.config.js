@@ -19,7 +19,9 @@ module.exports = {
     plugins:[
         new htmlWebpackPlugin({
             filename: 'index-[hash].html',
-            template: 'index.html'
+            template: 'index.html',
+            inject: 'head'
+
         })
     ]
 };
