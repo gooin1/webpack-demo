@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,6 +78,25 @@ function hello(str) {
 }
 
 hello("拉拉啦");
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+/**
+ * Created by gooin on 2017/4/10.
+ */
+function world() {
+    
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+module.exports = __webpack_require__(1);
+
 
 /***/ })
 /******/ ]);
