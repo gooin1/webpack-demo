@@ -4,6 +4,9 @@
 
 // 解决不是绝对路径报错问题
 var path = require('path');
+
+var htmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: {
         main:'./src/script/main.js',
@@ -11,6 +14,11 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist/js'),
-        filename: '[name]-[chunkhash].bundle.js'
-    }
+        filename: '[name]-[hash].bundle.js'
+    },
+    plugins:[
+        new htmlWebpackPlugin({
+            template: 'index.html'
+        })
+    ]
 };
