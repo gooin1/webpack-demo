@@ -10,7 +10,9 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         main:'./src/script/main.js',
-        page:['./src/script/a.js','./src/script/b.js']
+        a: './src/script/a.js',
+        b: './src/script/b.js',
+        c: './src/script/c.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -19,15 +21,20 @@ module.exports = {
     },
     plugins:[
         new htmlWebpackPlugin({
-            filename: 'index.html',
+            filename: 'a.html',
             template: 'index.html',
-            title: 'Webpack is good',
-            date: new Date(),
-            minify: {
-                removeComments: true,
-                collapseWhitespace: true
+            title: 'This is A page'
+        }),
+        new htmlWebpackPlugin({
+            filename: 'b.html',
+            template: 'index.html',
+            title: 'This is B page'
+        }),
+        new htmlWebpackPlugin({
+            filename: 'c.html',
+            template: 'index.html',
+            title: 'This is C page'
 
-            }
         })
     ]
 };
