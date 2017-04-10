@@ -77,7 +77,7 @@ function hello(str) {
     alert(str);
 }
 
-hello("丢雷楼某");
+hello("拉拉啦");
 
 /***/ })
 /******/ ]);
