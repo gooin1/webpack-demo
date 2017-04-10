@@ -13,11 +13,12 @@ module.exports = {
         page:['./src/script/a.js','./src/script/b.js']
     },
     output: {
-        path: path.resolve(__dirname, './dist/js'),
-        filename: '[name]-[hash].bundle.js'
+        path: path.resolve(__dirname, './dist'),
+        filename: 'js/[name]-[chunkhash].bundle.js'
     },
     plugins:[
         new htmlWebpackPlugin({
+            filename: 'index-[hash].html',
             template: 'index.html'
         })
     ]
